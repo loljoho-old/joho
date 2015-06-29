@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "0.12"
+  - "0.10"
+  - iojs
+
+cache:
+  directories:
+    - node_modules
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - node_js: iojs
+
+branches:
+  only:
+    - develop
+
+before_script:
+  - npm install
+  - bower install
+
+script:
+  - gulp test
+  - gulp protractor
