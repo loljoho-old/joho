@@ -9,6 +9,7 @@
   function gpNavbar() {
     var directive = {
       restrict: 'E',
+      replace: true,
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
           creationDate: '='
