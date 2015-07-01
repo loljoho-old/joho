@@ -6,7 +6,7 @@
     .controller('SidebarController', SidebarController);
 
     /** @ngInject */
-    function SidebarController($log) {
+    function SidebarController($mdSidenav, $mdMedia, $log) {
       var cm = this;
 
       cm.items = [{
@@ -24,6 +24,13 @@
 
       function activate() {
         $log.info('Activated Sidebar Controller');
+      }
+
+      function close() {
+        $mdSidenav('left').close()
+          .then(function() {
+            $log.info('Closed Sidenav Left');
+          });
       }
     }
 

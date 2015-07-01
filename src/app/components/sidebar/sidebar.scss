@@ -1,7 +1,9 @@
 // Structure
 // ------------------------------
 md-sidenav.sidebar {
-  @include width-absolute(270px);
+  &.md-sidenav-left {
+    @include absolute-width(270px);
+  }
 }
 
 // Utilities
