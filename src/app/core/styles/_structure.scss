@@ -1,0 +1,76 @@
+// Base Styles
+// ------------------------------
+html {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body { 
+  overflow: hidden;
+  background-color: #000000;
+
+  * {
+    overflow-x: hidden;
+  }
+}
+
+// Material Components
+// ------------------------------
+md-sidenav {
+  md-content {
+    background: transparent;
+  }
+}
+
+// Material Classes
+// ------------------------------
+.md-whiteframe-glow-z1 {
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.140),
+              0px 0px 2px 2px rgba(0, 0, 0, 0.098),
+              0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+}
+.md-whiteframe-glow-z2 {
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.200), 
+              0px 0px 4px 3px rgba(0, 0, 0, 0.140), 
+              0px 0px 8px 1px rgba(0, 0, 0, 0.120);
+}
+/*
+header {
+  md-toolbar {
+    .md-toolbar-tools {
+      margin: 8px 0;
+      &.md-toolbar-tools-bottom {
+        margin-bottom: 0px;
+      }
+      .md-button {
+        md-icon {
+          margin: 0 4px 2px 0;
+        }
+        span {
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+*/
+
+/*
+section {
+  md-content {
+    &:first-child {
+      padding-top: 0px;
+    }
+  }
+}
+*/
+
+/*
+footer {
+  & * {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+*/
