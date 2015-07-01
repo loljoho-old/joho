@@ -1,0 +1,41 @@
+<md-sidenav class="sidebar md-sidenav-left md-whiteframe-z4"
+            layout="column"
+            layout-fill
+            md-component-id="left"
+            md-is-locked-open="$mdMedia('gt-sm')"
+            flex="15">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      
+    </div>
+  </md-toolbar>
+  <!--
+  <div class="sidebar-header">
+    <a ng-href="#/" class="">
+      <img src="" alt="" />
+      <h1 class="">Jonathan Ho</h1>
+    </a>
+  </div>
+  -->
+  <!--
+  <ul class="skip-links">
+    <li class="md-whiteframe-z2">
+      <md-button ng-click="focusMain($event)" 
+                 href="#">
+        Skip to content
+      </md-button>
+    </li>
+  </ul>
+  -->
+
+  <md-content class="sidebar-items"
+              role="navigation"
+              flex>
+    <md-list>
+      <md-list-item ng-repeat="item in cm.items">
+        <p>{{ item.name }}</p>
+      </md-list-item>
+    </md-list>
+  </md-content>
+
+</md-sidenav>

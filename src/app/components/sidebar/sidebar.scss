@@ -1,0 +1,42 @@
+// Structure
+// ------------------------------
+md-sidenav.sidebar {
+  @include width-absolute(270px);
+}
+
+// Utilities
+// ------------------------------
+ul {
+  margin: 0;
+  padding: 0;
+
+  &.skip-links {
+
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        background-color: #fff;
+        display: block;
+        margin: 0.5em 0 0.5em 0.5em;
+        opacity: 0;
+        left: 0;
+        position: absolute;
+        text-decoration: none;
+        top: 0;
+        width: 92%;
+        -webkit-transition: opacity   0.15s linear;
+        -moz-transition: opacity  0.15s linear;
+        transition: opacity   0.15s linear;
+
+        &:focus {
+          background-color: #fff !important;
+          opacity: 1;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

@@ -3,10 +3,10 @@
 
   angular
     .module('joho')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('gpNavbar', gpNavbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function gpNavbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
@@ -14,18 +14,18 @@
           creationDate: '='
       },
       controller: NavbarController,
-      controllerAs: 'vm',
+      controllerAs: 'vc',
       bindToController: true
     };
 
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
-      var vm = this;
+    function NavbarController() {
+      //var vc = this;
 
-      // "vm.creation" is avaible by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow();
+      // "vc.creation" is avaible by directive option "bindToController: true"
+      // vc.relativeDate = moment(vc.creationDate).fromNow();
     }
   }
 

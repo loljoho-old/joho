@@ -26,12 +26,65 @@
   <script src="../bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
   </head>
-  <body>
+  <body layout="column">
   <!--[if lt IE 10]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ui-view></div>
+
+  <header layout="row">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <span flex></span>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+  </header>
+
+
+  <main layout="row" 
+        layout-align="center start">
+
+    <gp-sidebar>
+    </gp-sidebar>
+
+    <div layout="column" flex hide-sm>
+      <md-toolbar>
+      </md-toolbar>
+    </div>
+
+    <div class="md-whiteframe-z4"
+         layout="column"
+         tabIndex="-1"
+         flex="66">
+
+      <md-content md-scroll-y
+                  ui-view>
+      </md-content>
+
+    </div>
+
+    <!--
+    <md-content class="md-whiteframe-z4" 
+                layout="column"
+                tabIndex="-1"
+                md-scroll-y
+                flex="50">
+
+      <div ui-view>
+      </div>
+
+    </md-content>
+    -->
+
+    <div layout="column" flex="10" hide-sm>
+      <md-toolbar></md-toolbar>
+    </div>
+
+  </main>
+
+
 
   <!-- build:js(src) scripts/vendor.js -->
   <!-- bower:js -->
