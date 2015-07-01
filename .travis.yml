@@ -1,12 +1,9 @@
 language: node_js
+
 node_js:
   - "0.12"
   - "0.10"
   - iojs
-
-cache:
-  directories:
-    - node_modules
 
 matrix:
   fast_finish: true
@@ -15,12 +12,24 @@ matrix:
 
 branches:
   only:
-    - develop
+    - master
 
 before_script:
-  - npm install
-  - bower install
+  - git fetch --tags
+  - npm install bower -g
+  - npm install gulp -g
 
 script:
+- npm install
+- bower install
   - gulp test
   - gulp protractor
+
+cache:
+  directories:
+    - node_modules
+    - bower_components
+
+notifications:
+  email:
+    - joho1710@gmail.com
