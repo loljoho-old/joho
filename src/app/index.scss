@@ -5,23 +5,12 @@
 // bower:scss
 // endbower
 
-html {
-  font-family: 'Ubuntu', sans-serif;
-}
-
-html, body { 
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-// Mixins
-// ------------------------------
-@mixin width-absolute ($width) {
-  width: $width;
-  min-width: $width;
-  max-width: $width;
-}
-
+@import 'core/styles/variables';
+@import 'core/styles/mixins';
+@import 'core/styles/typography';
+@import 'core/styles/structure';
+@import 'core/styles/layout';
+@import 'core/styles/components';
 
 /**
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject

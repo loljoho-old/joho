@@ -1,11 +1,22 @@
 <!doctype html>
 <html class="no-js" ng-app="joho">
-  <head>
+<head>
+
   <meta charset="utf-8">
+
   <title>joho</title>
+
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link rel="icon" sizes="192x192" href="assets/icons/chrome-touch-icon-192x192.png">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/icons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic" rel="stylesheet">
@@ -25,65 +36,40 @@
   <!-- build:js(src) scripts/modernizr.js -->
   <script src="../bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
-  </head>
-  <body layout="column">
+</head>
+<body layout="row">
   <!--[if lt IE 10]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+  <gp-sidebar></gp-sidebar>
+
+  <div layout="column" tabIndex="-1" role="main" flex>
+
+    <gp-navbar></gp-navbar>
 
 
-  <header layout="row">
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <span flex></span>
-        <span flex></span>
-        <span flex></span>
+    <div layout="row">
+
+      <div layout="column" 
+           hide-gt-sm
+           flex>
       </div>
-    </md-toolbar>
-  </header>
 
-
-  <main layout="row" 
-        layout-align="center start">
-
-    <gp-sidebar>
-    </gp-sidebar>
-
-    <div layout="column" flex hide-sm>
-      <md-toolbar>
-      </md-toolbar>
-    </div>
-
-    <div class="md-whiteframe-z4"
-         layout="column"
-         tabIndex="-1"
-         flex="66">
-
-      <md-content md-scroll-y
-                  ui-view>
+      <md-content class="md-whiteframe-z2"
+                  layout="column"
+                  md-scroll-y>
+        <div ui-view></div>
       </md-content>
-
-    </div>
-
-    <!--
-    <md-content class="md-whiteframe-z4" 
-                layout="column"
-                tabIndex="-1"
-                md-scroll-y
-                flex="50">
-
-      <div ui-view>
+    
+      <div layout="column" 
+           hide-gt-md
+           flex>
       </div>
 
-    </md-content>
-    -->
+      <gp-subnav></gp-subnav>
 
-    <div layout="column" flex="10" hide-sm>
-      <md-toolbar></md-toolbar>
     </div>
-
-  </main>
-
+  </div>
 
 
   <!-- build:js(src) scripts/vendor.js -->
